@@ -1,13 +1,46 @@
 (function (){
 
 	var score = 0;
+	var question = document.getElementById("question");
+	var answer = document.getElementById("answer");
+	var i = 0;
 
+	var questionnaire.length = 5;
 
-	document.getElementById("question").innerHTML = questionsList[i];
+	var questionList = [
+		"What type of coffee contains the most caffeine?",
+		"Which coffee roast contains more caffeine, dark roast or light roast?",
+		"Name one of the two most common types of coffee beans.",
+		"Where is the only place to grow coffee in the US?",
+		"What is the approximate average amount of coffee consumed per day (in cups)?"
+		];
+
+	var answerList = [
+		"brewed coffee",
+		"dark roast",
+		"arabica",
+		"hawaii",
+		"3 cups"
+		];
+
+	question.innerHTML = questionList[i];
 
 	submit.onclick = function () {
 		console.log(answer.value, questionList[i], answerList[i]);
-		// body...
+		if (answer.value == answerList[i]) {
+			console.log("Correct!");
+			alert("Correct!");
+			i++;
+			question.innerHTML = questionList[i];
+			answer.value = null;
+		} else {
+			console.log("Sorry, that's wrong.");
+			alert("Sorry, that's wrong.");
+			i++;
+			question.innerHTML = questionList[i];
+			answer.value = null;
+		}
+
 	}
 
 	/*var answer1 = prompt("What type of coffee contains the most caffeine?", " ").toLowerCase();
