@@ -7,21 +7,34 @@
 
 	var questionnaire.length = 5;
 
-	var questionList = [
-		"What type of coffee contains the most caffeine?",
-		"Which coffee roast contains more caffeine, dark roast or light roast?",
-		"Name one of the two most common types of coffee beans.",
-		"Where is the only place to grow coffee in the US?",
-		"What is the approximate average amount of coffee consumed per day (in cups)?"
-		];
+	var questions = [
+		{
+			question: "What type of coffee contains the most caffeine?",
+			answer: "brewed coffee"
+		},
 
-	var answerList = [
-		"brewed coffee",
-		"dark roast",
-		"arabica",
-		"hawaii",
-		"3 cups"
-		];
+		{
+			question: "Which coffee roast contains more caffeine, dark roast or light roast?",
+			answer: "dark roast"
+		},
+
+		{
+			question: "Name one of the two most common types of coffee beans.",
+			answer: "arabica"
+		},
+
+		{
+			question: "Where is the only place to grow coffee in the US?",
+			answer: "hawaii"
+		},
+
+		{
+			question: "What is the approximate average amount of coffee consumed per day (in cups)?"
+			answer: "3 cups"
+		},
+		
+		]
+
 
 	question.innerHTML = questionList[i];
 
